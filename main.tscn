@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dixsrvt20h6bc"]
+
+[ext_resource type="PackedScene" uid="uid://cax3i3ulg26p8" path="res://UI/title_screen.tscn" id="1_4vhn3"]
+[ext_resource type="PackedScene" uid="uid://cbam4sfdhq37r" path="res://UI/esc_menu.tscn" id="2_bx7p2"]
+[ext_resource type="PackedScene" uid="uid://dpm0mk2dbm1r1" path="res://UI/score_label.tscn" id="3_1tgpm"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Game" type="Node2D" parent="."]
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="TitleScreen" parent="UI" instance=ExtResource("1_4vhn3")]
+
+[node name="EscMenu" parent="UI" instance=ExtResource("2_bx7p2")]
+visible = false
+
+[node name="ScoreLabel" parent="UI" instance=ExtResource("3_1tgpm")]
+visible = false

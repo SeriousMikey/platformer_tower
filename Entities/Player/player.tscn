@@ -1,20 +1,23 @@
-[gd_scene load_steps=5 format=3 uid="uid://djkeg2mo7djbw"]
+[gd_scene load_steps=8 format=3 uid="uid://djkeg2mo7djbw"]
 
 [ext_resource type="Texture2D" uid="uid://bv8a6qgi4ah4w" path="res://icon.svg" id="1_7rrvs"]
 [ext_resource type="Script" path="res://Entities/Player/player.gd" id="1_mmufl"]
+[ext_resource type="AudioStream" uid="uid://b70g0p7dy63np" path="res://Audio/SFX/dead.wav" id="3_jx25w"]
+[ext_resource type="AudioStream" uid="uid://b8umnk2f06ht2" path="res://Audio/SFX/jump.wav" id="4_lsybo"]
+[ext_resource type="AudioStream" uid="uid://eerbo8m56xwy" path="res://Audio/Music/main_song.wav" id="5_40cvo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fesc6"]
-size = Vector2(64, 80)
+size = Vector2(64, 64)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qhcvk"]
-size = Vector2(70, 86)
+size = Vector2(70, 70)
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_mmufl")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, 1.90735e-06)
-scale = Vector2(0.5, 0.625)
+position = Vector2(0, 7.15256e-07)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_7rrvs")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -25,6 +28,17 @@ shape = SubResource("RectangleShape2D_fesc6")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
 shape = SubResource("RectangleShape2D_qhcvk")
 
+[node name="DeadSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_jx25w")
+
+[node name="JumpSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_lsybo")
+volume_db = 8.346
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_40cvo")
+
 [connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
 [connection signal="area_exited" from="Hitbox" to="." method="_on_hitbox_area_exited"]
-[connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
+[connection signal="finished" from="DeadSound" to="." method="_on_dead_sound_finished"]
+[connection signal="finished" from="Music" to="." method="_on_music_finished"]

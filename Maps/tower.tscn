@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dpen0elj6clar"]
+[gd_scene load_steps=11 format=3 uid="uid://dpen0elj6clar"]
 
 [ext_resource type="Script" path="res://Maps/tower.gd" id="1_ifppb"]
 [ext_resource type="Texture2D" uid="uid://bxiw564uasj1y" path="res://Images/cloud.png" id="2_pgug1"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dg0ph2sxpg36" path="res://Objects/one_way_platforms.tscn" id="5_pd1tq"]
 [ext_resource type="PackedScene" uid="uid://djkeg2mo7djbw" path="res://Entities/Player/player.tscn" id="5_relme"]
 [ext_resource type="PackedScene" uid="uid://cwjmyq8cfsgs2" path="res://Entities/Enemies/poison_cloud.tscn" id="7_f3ipm"]
+[ext_resource type="PackedScene" uid="uid://bavmurxjyucih" path="res://Objects/winner_platform.tscn" id="8_g1q22"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_igkig"]
 size = Vector2(1152, 136)
@@ -31,10 +32,16 @@ position = Vector2(576, 580)
 shape = SubResource("RectangleShape2D_igkig")
 
 [node name="Sky" type="ColorRect" parent="."]
-offset_top = -23664.0
+offset_top = -17152.0
 offset_right = 1152.0
 offset_bottom = 512.0
 color = Color(0, 0.748042, 0.748042, 1)
+
+[node name="Space" type="ColorRect" parent="."]
+offset_top = -18928.0
+offset_right = 1152.0
+offset_bottom = -17152.0
+color = Color(0, 0, 0, 1)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(576, 320)
@@ -98,6 +105,498 @@ texture = ExtResource("2_pgug1")
 [node name="Cloud10" type="Sprite2D" parent="Clouds"]
 self_modulate = Color(1, 1, 1, 0.811765)
 position = Vector2(288, -1080)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud11" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(416, -2128)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud12" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(866.25, -2233.75)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud13" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(466.25, -2441.75)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud14" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(714.25, -2641.75)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud15" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(986.25, -2881.75)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud16" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(586.25, -3065.75)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud17" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(954.25, -3457.75)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud18" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(338.25, -3617.75)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud19" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(1002.25, -3753.75)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud20" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(434.25, -3305.75)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud21" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(200, -4200)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud22" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(650.25, -4305.75)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud23" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(250.25, -4513.75)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud24" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(498.25, -4713.75)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud25" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(770.25, -4953.75)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud26" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(370.25, -5137.75)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud27" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(738.25, -5529.75)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud28" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(122.25, -5689.75)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud29" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(786.25, -5825.75)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud30" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(218.25, -5377.75)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud31" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(472, -6080)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud32" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(922.25, -6185.75)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud33" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(522.25, -6393.75)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud34" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(770.25, -6593.75)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud35" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(1042.25, -6833.75)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud36" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(642.25, -7017.75)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud37" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(1010.25, -7409.75)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud38" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(394.25, -7569.75)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud39" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(1058.25, -7705.75)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud40" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(490.25, -7257.75)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud41" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(224, -7840)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud42" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(674.25, -7945.75)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud43" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(274.25, -8153.75)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud44" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(522.25, -8353.75)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud45" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(794.25, -8593.75)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud46" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(394.25, -8777.75)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud47" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(762.25, -9169.75)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud48" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(146.25, -9329.75)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud49" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(810.25, -9465.75)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud50" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(242.25, -9017.75)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud51" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(448, -9664)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud52" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(898.25, -9769.75)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud53" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(498.25, -9977.75)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud54" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(746.25, -10177.8)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud55" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(1018.25, -10417.8)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud56" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(618.25, -10601.8)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud57" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(986.25, -10993.8)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud58" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(370.25, -11153.8)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud59" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(1034.25, -11289.8)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud60" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(466.25, -10841.8)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud61" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(826.25, -11449.8)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud62" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(426.25, -11633.8)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud63" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(794.25, -12025.8)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud64" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(178.25, -12185.8)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud65" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(842.25, -12321.8)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud66" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(274.25, -11873.8)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud67" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(480, -12520)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud68" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(930.25, -12625.8)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud69" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(530.25, -12833.8)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud70" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(778.25, -13033.8)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud71" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(1050.25, -13273.8)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud72" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(650.25, -13457.8)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud73" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(1018.25, -13849.8)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud74" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(402.25, -14009.8)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud75" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(1066.25, -14145.8)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud76" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(498.25, -13697.8)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud77" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(762.25, -14321.8)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud78" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(362.25, -14505.8)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud79" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(730.25, -14897.8)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud80" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(114.25, -15057.8)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud81" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(778.25, -15193.8)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud82" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(210.25, -14745.8)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud83" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(416, -15392)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud84" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(866.25, -15497.8)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud85" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(466.25, -15705.8)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud86" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(714.25, -15905.8)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud87" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(986.25, -16145.8)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud88" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(586.25, -16329.8)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud89" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(954.25, -16721.8)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud90" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(338.25, -16881.8)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud91" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(1002.25, -17017.8)
+scale = Vector2(0.490343, 0.559278)
+texture = ExtResource("2_pgug1")
+
+[node name="Cloud92" type="Sprite2D" parent="Clouds"]
+self_modulate = Color(1, 1, 1, 0.811765)
+position = Vector2(434.25, -16569.8)
 scale = Vector2(0.490343, 0.559278)
 texture = ExtResource("2_pgug1")
 
@@ -169,8 +668,548 @@ scale = Vector2(2.03939, 1.78802)
 position = Vector2(918.235, -4809.33)
 scale = Vector2(2.03939, 1.78802)
 
+[node name="StaticPlatform8" parent="Platforms" instance=ExtResource("3_s4xtq")]
+position = Vector2(118.794, -8070.67)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="StaticPlatform11" parent="Platforms" instance=ExtResource("3_s4xtq")]
+position = Vector2(-305.398, -8070.67)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="StaticPlatform9" parent="Platforms" instance=ExtResource("3_s4xtq")]
+position = Vector2(542.987, -8070.67)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="StaticPlatform10" parent="Platforms" instance=ExtResource("3_s4xtq")]
+position = Vector2(967.18, -8070.67)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="StaticPlatform12" parent="Platforms" instance=ExtResource("3_s4xtq")]
+position = Vector2(-109.617, -9858.69)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="StaticPlatform13" parent="Platforms" instance=ExtResource("3_s4xtq")]
+position = Vector2(-109.617, -9858.69)
+scale = Vector2(2.03939, 1.78802)
+
 [node name="OneWayPlatforms10" parent="Platforms" instance=ExtResource("5_pd1tq")]
 position = Vector2(918.235, -5038.19)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms11" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(-289.083, -7269.64)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms12" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(-109.617, -9944.52)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms13" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(-109.617, -10030.3)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms14" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(-109.617, -10116.2)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms15" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(-109.617, -10202)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms16" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(-109.617, -10202)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms17" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(-109.617, -10287.8)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms18" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(-109.617, -10373.6)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms19" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(-109.617, -10459.5)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms20" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(-109.617, -10545.3)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms21" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(-109.617, -10631.1)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms22" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(-109.617, -10716.9)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms23" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(-109.617, -10788.5)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms24" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(-109.617, -10874.3)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms25" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(-109.617, -10960.1)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms26" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(-109.617, -11045.9)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms27" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(-109.617, -11131.8)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms28" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(-109.617, -11217.6)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms29" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(-109.617, -11303.4)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms48" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(-109.617, -11303.4)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="StaticPlatform14" parent="Platforms" instance=ExtResource("3_s4xtq")]
+position = Vector2(624.563, -11489.4)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="StaticPlatform15" parent="Platforms" instance=ExtResource("3_s4xtq")]
+position = Vector2(624.563, -11489.4)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="StaticPlatform16" parent="Platforms" instance=ExtResource("3_s4xtq")]
+position = Vector2(281.945, -11374.9)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="StaticPlatform17" parent="Platforms" instance=ExtResource("3_s4xtq")]
+position = Vector2(1016.13, -13048.5)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="StaticPlatform33" parent="Platforms" instance=ExtResource("3_s4xtq")]
+position = Vector2(640.878, -13263.1)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="StaticPlatform34" parent="Platforms" instance=ExtResource("3_s4xtq")]
+position = Vector2(249.315, -13420.4)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="StaticPlatform35" parent="Platforms" instance=ExtResource("3_s4xtq")]
+position = Vector2(-125.932, -13620.7)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="StaticPlatform36" parent="Platforms" instance=ExtResource("3_s4xtq")]
+position = Vector2(-403.289, -13835.2)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms30" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(624.563, -11575.2)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms31" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(624.563, -11661)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms32" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(624.563, -11746.8)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms33" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(624.563, -11832.7)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms34" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(624.563, -11832.7)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms35" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(624.563, -11918.5)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms36" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(624.563, -12004.3)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms37" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(624.563, -12090.1)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms38" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(624.563, -12176)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms39" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(624.563, -12261.8)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms40" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(624.563, -12347.6)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms41" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(624.563, -12419.1)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms42" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(624.563, -12505)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms43" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(624.563, -12590.8)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms44" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(624.563, -12676.6)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms45" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(624.563, -12762.4)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms46" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(624.563, -12848.3)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms47" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(624.563, -12934.1)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="SuperJumpPlatform2" parent="Platforms" instance=ExtResource("4_l51ix")]
+position = Vector2(-289.083, -4523.24)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="SuperJumpPlatform3" parent="Platforms" instance=ExtResource("4_l51ix")]
+position = Vector2(118.794, -7269.64)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="SuperJumpPlatform4" parent="Platforms" instance=ExtResource("4_l51ix")]
+position = Vector2(542.987, -7269.64)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="SuperJumpPlatform5" parent="Platforms" instance=ExtResource("4_l51ix")]
+position = Vector2(967.18, -7269.64)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="SuperJumpPlatform6" parent="Platforms" instance=ExtResource("4_l51ix")]
+position = Vector2(1424, -7269.64)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="StaticPlatform2" parent="Platforms" instance=ExtResource("3_s4xtq")]
+position = Vector2(37.2187, -14021.2)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="StaticPlatform18" parent="Platforms" instance=ExtResource("3_s4xtq")]
+position = Vector2(673.508, -14164.2)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="StaticPlatform19" parent="Platforms" instance=ExtResource("3_s4xtq")]
+position = Vector2(624.563, -18212.3)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="SuperJumpPlatform7" parent="Platforms" instance=ExtResource("4_l51ix")]
+position = Vector2(1375.06, -14335.9)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms49" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(-403.289, -18012.1)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms50" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(-109.617, -18012.1)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms51" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(184.055, -18012.1)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms52" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(1652.41, -18012.1)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms53" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(1358.74, -18012.1)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms54" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(1065.07, -18012.1)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms55" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(624.563, -18441.2)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="StaticPlatform20" parent="Platforms" instance=ExtResource("3_s4xtq")]
+position = Vector2(330.891, -18641.4)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms56" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(330.891, -18870.3)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="StaticPlatform21" parent="Platforms" instance=ExtResource("3_s4xtq")]
+position = Vector2(624.563, -19084.9)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms57" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(624.563, -19313.7)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="StaticPlatform22" parent="Platforms" instance=ExtResource("3_s4xtq")]
+position = Vector2(918.235, -19528.3)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="StaticPlatform23" parent="Platforms" instance=ExtResource("3_s4xtq")]
+position = Vector2(118.794, -22789.6)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="StaticPlatform24" parent="Platforms" instance=ExtResource("3_s4xtq")]
+position = Vector2(-305.399, -22789.6)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="StaticPlatform25" parent="Platforms" instance=ExtResource("3_s4xtq")]
+position = Vector2(542.987, -22789.6)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="StaticPlatform26" parent="Platforms" instance=ExtResource("3_s4xtq")]
+position = Vector2(967.18, -22789.6)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="StaticPlatform27" parent="Platforms" instance=ExtResource("3_s4xtq")]
+position = Vector2(-109.617, -24577.7)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="StaticPlatform28" parent="Platforms" instance=ExtResource("3_s4xtq")]
+position = Vector2(-109.617, -24577.7)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms58" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(918.235, -19757.2)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms59" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(-289.083, -21988.6)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms60" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(-109.617, -24663.5)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms61" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(-109.617, -24749.3)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms62" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(-109.617, -24835.1)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms63" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(-109.617, -24921)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms64" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(-109.617, -24921)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms65" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(-109.617, -25006.8)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms66" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(-109.617, -25092.6)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms67" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(-109.617, -25178.4)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms68" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(-109.617, -25264.3)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms69" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(-109.617, -25350.1)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms70" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(-109.617, -25435.9)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms71" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(-109.617, -25507.4)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms72" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(-109.617, -25593.3)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms73" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(-109.617, -25679.1)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms74" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(-109.617, -25764.9)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms75" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(-109.617, -25850.7)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms76" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(-109.617, -25936.6)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms77" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(-109.617, -26022.4)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms78" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(-109.617, -26022.4)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="StaticPlatform29" parent="Platforms" instance=ExtResource("3_s4xtq")]
+position = Vector2(624.563, -26208.3)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="StaticPlatform30" parent="Platforms" instance=ExtResource("3_s4xtq")]
+position = Vector2(624.563, -26208.3)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="StaticPlatform31" parent="Platforms" instance=ExtResource("3_s4xtq")]
+position = Vector2(281.945, -26093.9)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="StaticPlatform32" parent="Platforms" instance=ExtResource("3_s4xtq")]
+position = Vector2(624.563, -31500.9)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms79" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(624.563, -26294.2)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms80" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(624.563, -26380)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms81" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(624.563, -26465.8)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms82" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(624.563, -26551.6)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms83" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(624.563, -26551.6)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms84" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(624.563, -26637.5)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms85" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(624.563, -26723.3)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms86" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(624.563, -26809.1)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms87" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(624.563, -26894.9)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms88" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(624.563, -26980.8)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms89" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(624.563, -27066.6)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms90" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(624.563, -27138.1)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms91" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(624.563, -27223.9)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms92" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(624.563, -27309.8)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms93" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(624.563, -27395.6)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms94" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(624.563, -27481.4)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms97" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(624.563, -27481.4)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms95" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(1652.41, -31372.1)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms98" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(1358.74, -31372.1)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms99" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(1065.07, -31372.1)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms102" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(184.055, -31372.1)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms103" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(-109.617, -31372.1)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms104" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(-403.289, -31372.1)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="OneWayPlatforms96" parent="Platforms" instance=ExtResource("5_pd1tq")]
+position = Vector2(624.563, -27653.1)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="SuperJumpPlatform8" parent="Platforms" instance=ExtResource("4_l51ix")]
+position = Vector2(-289.083, -19242.2)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="SuperJumpPlatform9" parent="Platforms" instance=ExtResource("4_l51ix")]
+position = Vector2(118.794, -21988.6)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="SuperJumpPlatform10" parent="Platforms" instance=ExtResource("4_l51ix")]
+position = Vector2(542.987, -21988.6)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="SuperJumpPlatform11" parent="Platforms" instance=ExtResource("4_l51ix")]
+position = Vector2(967.18, -21988.6)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="SuperJumpPlatform12" parent="Platforms" instance=ExtResource("4_l51ix")]
+position = Vector2(1424, -21988.6)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="SuperJumpPlatform13" parent="Platforms" instance=ExtResource("4_l51ix")]
+position = Vector2(1146.65, -27710.3)
+scale = Vector2(2.03939, 1.78802)
+
+[node name="WinnerPlatform" parent="Platforms" instance=ExtResource("8_g1q22")]
+position = Vector2(624.563, -31872.8)
 scale = Vector2(2.03939, 1.78802)
 
 [node name="Borders" type="Node2D" parent="."]
@@ -190,7 +1229,46 @@ position = Vector2(1164, -472)
 shape = SubResource("RectangleShape2D_xsnii")
 
 [node name="Player" parent="." instance=ExtResource("5_relme")]
-position = Vector2(72, 464)
+position = Vector2(120, 472)
 
-[node name="PoisonCloud" parent="." instance=ExtResource("7_f3ipm")]
-position = Vector2(1032, 216)
+[node name="PoisonClouds" type="Node2D" parent="."]
+
+[node name="PoisonCloud" parent="PoisonClouds" instance=ExtResource("7_f3ipm")]
+position = Vector2(1032, -8008)
+
+[node name="PoisonCloud2" parent="PoisonClouds" instance=ExtResource("7_f3ipm")]
+position = Vector2(536, -9672)
+
+[node name="PoisonCloud3" parent="PoisonClouds" instance=ExtResource("7_f3ipm")]
+position = Vector2(120, -10216)
+
+[node name="PoisonCloud4" parent="PoisonClouds" instance=ExtResource("7_f3ipm")]
+position = Vector2(1024, -10448)
+
+[node name="PoisonCloud5" parent="PoisonClouds" instance=ExtResource("7_f3ipm")]
+position = Vector2(120, -10720)
+
+[node name="PoisonCloud6" parent="PoisonClouds" instance=ExtResource("7_f3ipm")]
+position = Vector2(1024, -10960)
+
+[node name="PoisonCloud7" parent="PoisonClouds" instance=ExtResource("7_f3ipm")]
+position = Vector2(856, -12296)
+
+[node name="PoisonCloud10" parent="PoisonClouds" instance=ExtResource("7_f3ipm")]
+position = Vector2(216, -14456)
+
+[node name="PoisonCloud11" parent="PoisonClouds" instance=ExtResource("7_f3ipm")]
+position = Vector2(576, -14608)
+
+[node name="PoisonCloud12" parent="PoisonClouds" instance=ExtResource("7_f3ipm")]
+position = Vector2(576, -14896)
+
+[node name="PoisonCloud13" parent="PoisonClouds" instance=ExtResource("7_f3ipm")]
+position = Vector2(576, -15128)
+
+[node name="PoisonCloud14" parent="PoisonClouds" instance=ExtResource("7_f3ipm")]
+position = Vector2(576, -15368)
+
+[node name="PlaytimeTimer" type="Timer" parent="."]
+
+[connection signal="timeout" from="PlaytimeTimer" to="." method="_on_playtime_timer_timeout"]

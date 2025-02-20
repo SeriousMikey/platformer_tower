@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dixsrvt20h6bc"]
+[gd_scene load_steps=5 format=3 uid="uid://dixsrvt20h6bc"]
 
 [ext_resource type="PackedScene" uid="uid://cax3i3ulg26p8" path="res://UI/title_screen.tscn" id="1_4vhn3"]
 [ext_resource type="PackedScene" uid="uid://cbam4sfdhq37r" path="res://UI/esc_menu.tscn" id="2_bx7p2"]
 [ext_resource type="PackedScene" uid="uid://dpm0mk2dbm1r1" path="res://UI/score_label.tscn" id="3_1tgpm"]
+[ext_resource type="PackedScene" uid="uid://dfiaot48y3b4k" path="res://UI/time_label.tscn" id="4_7ra0y"]
 
 [node name="Main" type="Node2D"]
 
@@ -16,4 +17,7 @@
 visible = false
 
 [node name="ScoreLabel" parent="UI" instance=ExtResource("3_1tgpm")]
+visible = false
+
+[node name="TimeLabel" parent="UI" instance=ExtResource("4_7ra0y")]
 visible = false

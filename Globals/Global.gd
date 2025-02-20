@@ -9,7 +9,9 @@ extends Node
 @onready var esc_menu: Control = ui.get_node("EscMenu")
 @onready var title_screen: Control = preload("res://UI/title_screen.tscn").instantiate()
 @onready var score_label: Label = ui.get_node("ScoreLabel")
+@onready var time_label: Label = ui.get_node("TimeLabel")
 @onready var death_screen: Control = preload("res://UI/death_screen.tscn").instantiate()
+@onready var win_screen: Control = preload("res://UI/win_screen.tscn").instantiate()
 
 # Third Level Stuff
 var in_game: bool = false
@@ -50,3 +52,7 @@ func get_player() -> CharacterBody2D:
 func show_death_screen(final_score):
     ui.add_child(death_screen)
     death_screen.change_score(final_score)
+
+func show_win_screen(playtime):
+    ui.add_child(win_screen)
+    win_screen.change_time(playtime)

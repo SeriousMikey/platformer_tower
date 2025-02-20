@@ -12,6 +12,7 @@ var dead: bool = false
 
 func _ready() -> void:
     jump_velocity = normal_jump_velocity
+    $Music.play()
 
 func _physics_process(delta: float) -> void:
     # If the player is not in the menu
@@ -22,6 +23,7 @@ func _physics_process(delta: float) -> void:
 
         # Jump
         if Input.is_action_just_pressed("jump") and is_on_floor():
+            $JumpSound.play()
             velocity.y = jump_velocity
 
         # Get input direction
@@ -39,9 +41,11 @@ func _physics_process(delta: float) -> void:
 func _on_hitbox_area_entered(area: Area2D) -> void:
     # If hit by an enemy
     if area.is_in_group("Enemy"):
+        $Music.stop()
+        $DeadSound.play()
         dead = true
         Global.show_death_screen(-position.y + 471)
-        get_parent().call_deferred("remove_child", self)
+        
         
     # If area is a super jump platform
     elif area.is_in_group("SuperJumpPlatform"):
@@ -51,3 +55,10 @@ func _on_hitbox_area_exited(area: Area2D) -> void:
     # If area is a super jump platform
     if area.is_in_group("SuperJumpPlatform"):
         jump_velocity = normal_jump_velocity
+
+func _on_dead_sound_finished() -> void:
+    get_parent().call_deferred("remove_child", self)
+
+
+func _on_music_finished() -> void:
+    $Music.play()

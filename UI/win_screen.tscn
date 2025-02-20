@@ -1,0 +1,49 @@
+[gd_scene load_steps=2 format=3 uid="uid://bc6mwyo1kswr"]
+
+[ext_resource type="Script" path="res://UI/win_screen.gd" id="1_5ojh3"]
+
+[node name="WinScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5ojh3")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.74978, 0.74978, 0.74978, 1)
+
+[node name="FinalTimeLabel" type="Label" parent="."]
+self_modulate = Color(1, 1, 0, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.347222
+anchor_top = 0.248457
+anchor_right = 0.652778
+anchor_bottom = 0.354938
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "Final Time: 69"
+metadata/_edit_use_anchors_ = true
+
+[node name="MainMenuButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.444444
+anchor_top = 0.62963
+anchor_right = 0.555556
+anchor_bottom = 0.677469
+grow_horizontal = 2
+grow_vertical = 0
+text = "Main Menu"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="MainMenuButton" to="." method="_on_main_menu_button_pressed"]
